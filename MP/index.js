@@ -1,16 +1,15 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const router = express.Router()
 
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
 
 
 
-router.get('https://feroe.netlify.app/payment'), (req, res) =>{
 
-
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static(path.resolve(__dirname, 'FEROE/build')));
 
   mercadopago.configure({
   access_token: 'APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410'})
@@ -26,9 +25,6 @@ router.get('https://feroe.netlify.app/payment'), (req, res) =>{
                   quantity: 1,
                   currency_id: 'ARS'
                 }],
-                back_urls : {
-                  success: 'https://feroe.netlify.app/'
-                }
             };
             mercadopago.preferences.create(preference)
             .then((response)=> {
@@ -39,10 +35,9 @@ router.get('https://feroe.netlify.app/payment'), (req, res) =>{
               console.log(error);
             });
           })
- }
 
-  app.use(router)
-          app.listen(3010, () => {
-              console.log("Server  3000");
-          });
+          const PORT = process.env.PORT || 3001
+
+
+          app.listen(PORT);
        
