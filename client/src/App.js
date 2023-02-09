@@ -21,7 +21,6 @@ function App() {
           <Route path="/" element={<All/>} />
               <Route path="/productos" element={<ItemListContainer/> } />
               <Route path="/contacto" element={<Contacto />} />
-              <Route path="/payment" element={<Mer/>} />
               <Route path="/:categoria/:itemId" element={<ItemDetailContainer/>}/>
               <Route path="/carrito" element={<CartContent/>} />
               <Route path="/checkout" element={<Checkout/>} />
