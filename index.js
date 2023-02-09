@@ -29,7 +29,7 @@ app.use(express.static(
             mercadopago.preferences.create(preference)
             .then((response)=> {
             
-              res.redirect(response.body.init_point);
+              global.init_point = response.body.init_point;
              
             }).catch(function(error){
               console.log(error);
