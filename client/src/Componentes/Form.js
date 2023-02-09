@@ -11,14 +11,16 @@ import { toast } from "react-toastify";
 import { dbFirebase } from "./Firebase";
 import axios from 'axios'
 
-const Form = () => {
+const Form = () => { 
+    
+
     
     // const [formData, setFormData] = useState({ name: '', email: '', celu: '', city: '', region: '', casa: '', depto:'', codigo:'' })
     const {cart,totalPrice,cleanCart} = useAppContext() 
     const orders = collection(dbFirebase, "Ordenes");
     const [loading, setLoading] = useState(false);
-    const [ordenId, setOrdenId] = useState("");
-    const navigate = useNavigate();    const [buyer, setBuyer] = useState({
+    const [ordenId, setOrdenId] = useState("");  
+    const [buyer, setBuyer] = useState({
         name: "",
         celu: "",
         email: "",

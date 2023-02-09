@@ -1,18 +1,18 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const path = require('path')
 
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
 
 
-
-
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.static(path.resolve(__dirname, 'FEROE/build')));
+app.use(express.static(
+  path.join(__dirname,"FEROE/client/build")));
 
   mercadopago.configure({
-  access_token: 'APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410'})
+  access_token: 'TEST-4427981030188178-020410-f2c190606d5552ae69cfbcbb4dfce592-442830367'})
 
           //routes
           app.post('/payment', (req, res) => {
@@ -36,8 +36,6 @@ app.use(express.static(path.resolve(__dirname, 'FEROE/build')));
             });
           })
 
-          const PORT = process.env.PORT || 3001
-
-
-          app.listen(PORT);
-       
+          app.listen(3001, () => {
+              console.log("Server running on port: 3001", );
+            });
