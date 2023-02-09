@@ -31,14 +31,14 @@ app.use(express.static(
                 },
                 auto_return: "approved",
             };
-            mercadopago.preferences.create(preference)
-            .then((response)=> {
-            
-              console.log(response);
-             
-            }).catch(function(error){
+            mercadopago.preferences
+              .create(preference)
+              .then((response)=> {
+                  console.log(response);
+              })
+              .catch(function(error){
               console.log(error);
-            });
+              });
           })
 
     
