@@ -9,7 +9,7 @@ const mercadopago = require ('mercadopago');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(
-  path.join(__dirname,"FEROE/client/build")));
+  path.join(__dirname,"./public")));
 
   mercadopago.configure({
   access_token: 'TEST-4427981030188178-020410-f2c190606d5552ae69cfbcbb4dfce592-442830367'})
