@@ -161,7 +161,7 @@ const Form = () => {
                             <h3>${totalPrice}</h3>
                         </div>
                         <div>
-                            <form action="http://localhost:3001/payment" method="POST">
+                            <form action="/payment" method="POST">
                                 <input type="hidden" name="title" value='FEROE'/>
                                 <input type="hidden" name="price" value={totalPrice}/>                                                               
                                 
