@@ -24,7 +24,12 @@ app.use(express.static(
                   unit_price: parseInt(req.body.price),
                   quantity: 1,
                   currency_id: 'ARS'
-                }],
+                }],		back_urls: {
+                  "success": "https://feroee.onrender.com",
+                  "failure": "https://feroee.onrender.com",
+                  "pending": "https://feroee.onrender.com"
+                },
+                auto_return: "approved",
             };
             mercadopago.preferences.create(preference)
             .then((response)=> {
