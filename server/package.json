@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "wat": "npx nodemon index" ,
     "start": "node index.js",
-    "build": "npm run build --prefix client"
+    "build": "cd client && npm install && npm run build"
+  },
+  "engines": {
+    "node": "16.14.0"
   },
   "author": "",
   "license": "ISC",
