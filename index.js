@@ -34,7 +34,7 @@ app.use(express.static(
             mercadopago.preferences.create(preference)
             .then((response)=> {
             
-              global.init_point = response.body.init_point;
+              console.log(response);
              
             }).catch(function(error){
               console.log(error);
