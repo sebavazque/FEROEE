@@ -1,7 +1,11 @@
 const express = require('express');
-const app = express();
+const morgan = require('morgan');
+const server = express();
 const bodyParser = require('body-parser');
 const path = require('path')
+
+server.use (express.json())
+server.use(morgan('dev'))
 
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
