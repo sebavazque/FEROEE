@@ -65,18 +65,7 @@ const Form = () => {
                 // cleanCart([]);
             })
 
-        }
-        // if (cart.length === 0) {
-        //     setTimeout(() => {
-        //       navigate("/");
-        //     }, 3000);    
-        //     return (
-        //         <div className="empty-cart">
-        //           <p>No hay productos en tu carrito</p>
-        //           <p>Serás redirigido al inicio en 3 segundos...</p>
-        //         </div>
-        //       );
-        //     }
+    }
 
 
   return (
@@ -161,7 +150,7 @@ const Form = () => {
                             <h3>${totalPrice}</h3>
                         </div>
                         <div>
-                            <form action="http://localhost:3001/payment" method="POST">
+                            <form action="/payment" method="POST">
                                 <input type="hidden" name="title" value='FEROE'/>
                                 <input type="hidden" name="price" value={totalPrice}/>                                                               
                                 
