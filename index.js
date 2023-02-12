@@ -2,14 +2,16 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path')
+const http = require('http');
 
 app.use (express.json())
 
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
-
+const server = http.createServer(mercadopago);
 
 app.use(bodyParser.urlencoded({ extended: false }))
+app.set('port', process.env.PORT || 3001)
 app.use(express.static(
   path.join(__dirname,"./public")));
 
@@ -38,6 +40,9 @@ app.use(express.static(
             });
           })
 
-          app.listen(3001, () => {
-              console.log("Server running on port: 3001", );
-            });
+        //   server.listen(app.get('port'),()=>{
+        //     console.log(`Server on port ${app.get('port')}`)
+        // })
+
+        server.listen(3001);
+        console.log("Server")
