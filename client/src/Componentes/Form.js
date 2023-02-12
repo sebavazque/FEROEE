@@ -150,12 +150,16 @@ const Form = () => {
                             <h3>${totalPrice}</h3>
                         </div>
                         <div>
-                            <form action="/payment" method="POST">
+                            {/* <form action="/payment" method="POST">
                                 <input type="hidden" name="title" value='FEROE'/>
                                 <input type="hidden" name="price" value={totalPrice}/>                                                               
                                 
                                 <button type='submit' className='btnPagar' onClick={handleConfirm}><h4>Pagar</h4></button>
-                            </form>
+                            </form> */}
+
+                           <button onClick={() => {
+                            axios.post('http://localhost:3001/payment' , totalPrice).then((res) => window.location.href = res.data.response.body.init_point)
+                            }} ></button>
                             </div>
                         <h3>su orden es {ordenId}</h3>
 
