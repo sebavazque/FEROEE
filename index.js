@@ -4,14 +4,14 @@ const bodyParser = require('body-parser');
 const path = require('path')
 
 
-app.use (express.json())
+app.use (express.json());
 
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
 
 
 app.use(bodyParser.urlencoded({ extended: false }))
-app.set('port', process.env.PORT || 3001)
+
 app.use(express.static(
   path.join(__dirname,"./public")));
 
