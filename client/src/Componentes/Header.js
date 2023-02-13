@@ -23,11 +23,7 @@ function Header () {
 
     window.addEventListener('scroll', cambiarMenu);
 
-    function handleCart(){
-        setCarrito(carrito => !carrito);
-    }
 
-    let abrirCarrito = carrito ? 'open-cart' : 'close-cart'
 
     function handleClick(){
         setBurger(burger => !burger);

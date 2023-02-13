@@ -19,7 +19,7 @@ app.use(express.static(
   access_token: 'APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410'})
 
           //routes
-          app.post('/payment', (req, res) => {
+          server.post('/payment', (req, res) => {
            
             let preference = {
               items: [
