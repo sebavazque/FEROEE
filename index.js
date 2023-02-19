@@ -21,16 +21,16 @@ app.use(express.static(
           //routes
           app.post('/payment', (req, res) => {
            
-            let preference = {
-              items: [
-                {
-                  title:req.body.title,
-                  unit_price: parseInt(req.body.price),
-                  quantity: 1,
-                  currency_id: 'ARS'
-                }],
-            };
-            mercadopago.preferences.create(preference)
+
+            mercadopago.preferences.create({
+                items: [
+                  {
+                    title:req.body.title,
+                    unit_price: parseInt(req.body.price),
+                    quantity: 1,
+                    currency_id: 'ARS'
+                  }],
+            })
             .then((response)=> {
 
               res.redirect(response.body.init_point);
@@ -38,6 +38,8 @@ app.use(express.static(
             }).catch(function(error){
               console.log(error);
             });
+
+
           })
 
         //   server.listen(app.get('port'),()=>{
