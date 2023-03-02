@@ -32,22 +32,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <div class="cho-container"></div>
-          <script>
-            const mp = new MercadoPago('APP_USR-c7c1c087-e6bb-41e6-a638-131b9bd80ed9', {
-              locale: 'es-AR'
-            });
 
-            mp.checkout({
-              preference: {
-                id: preference
-              },
-              render: {
-                container: '.cho-container',
-                label: 'Pagar',
-              }
-            });
-          </script>
 
     </div>
     <!--

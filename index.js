@@ -42,9 +42,6 @@ app.use(express.static(
             });
           })
 
-        //   server.listen(app.get('port'),()=>{
-        //     console.log(`Server on port ${app.get('port')}`)
-        // })
 
         app.listen(3001);
         console.log("Server")

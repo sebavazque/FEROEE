@@ -11,9 +11,8 @@ import { toast } from "react-toastify";
 import { dbFirebase } from "./Firebase";
 import axios from 'axios'
 
-const Form = () => { 
-    
 
+const Form = () => { 
     
     // const [formData, setFormData] = useState({ name: '', email: '', celu: '', city: '', region: '', casa: '', depto:'', codigo:'' })
     const {cart,totalPrice,cleanCart} = useAppContext() 
@@ -150,12 +149,14 @@ const Form = () => {
                             <h3>${totalPrice}</h3>
                         </div>
                         <div>
+                            
                             <form action="http://localhost:3001/payment" method="POST">
                                 <input type="hidden" name="title" value='FEROE'/>
                                 <input type="hidden" name="price" value={totalPrice}/>                                                               
                                 
                                 <button type='submit' className='btnPagar' onClick={handleConfirm}><h4>Pagar</h4></button>
                             </form>
+                            
                             </div>
                         <h3>su orden es {ordenId}</h3>
 
