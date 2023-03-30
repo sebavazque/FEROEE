@@ -1,11 +1,5 @@
 {
   "dependencies": {
     "react-dotenv": "^0.1.3"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wat": " nodemon index.js" ,
-    "start": "cd server && node index.js",
-    "build": "cd client && npm run build"
   }
 }
