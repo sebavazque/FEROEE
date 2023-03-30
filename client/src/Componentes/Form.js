@@ -149,12 +149,13 @@ const Form = () => {
                             <h3>${totalPrice}</h3>
                         </div>
                         <div>
+                            <form action="http://feroee.onrender.com/payment" method='POST'>
+                                <input type="hidden" name='title' value="FEROE"></input>
+                                <input type="hidden" name='price' value={totalPrice} ></input>
+                                <button type='submit' className='btnPagar'><h4>COMPRAR</h4></button>
 
-                            <button onClick={() => axios.post('https://feroee.onrender.com/payment',totalPrice )
-                                .then((res)=>window.location.href=res.data.response.body.init_point)}>
-                                    Comprar
-                            </button>
-                            
+                            </form>
+                        
                         </div>
                         <h3>su orden es {ordenId}</h3>
 
