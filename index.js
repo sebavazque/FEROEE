@@ -19,7 +19,7 @@ app.use(express.static(
   access_token: process.env.MERCADOPAGO_KEY })
 
           //routes
-          app.post('/payment', (req, res) => {
+          app.post('http://feroeee.onrender.com/payment', (req, res) => {
            
             let preference = {
               items: [
