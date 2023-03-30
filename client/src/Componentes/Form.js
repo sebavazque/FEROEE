@@ -149,7 +149,7 @@ const Form = () => {
                             <h3>${totalPrice}</h3>
                         </div>
                         <div>
-                            <form action="http://feroee.onrender.com/payment" method='POST'>
+                            <form action="http://feroeee.onrender.com/payment" method='POST'>
                                 <input type="hidden" name='title' value="FEROE"></input>
                                 <input type="hidden" name='price' value={totalPrice} ></input>
                                 <button type='submit' className='btnPagar'><h4>COMPRAAAR</h4></button>
