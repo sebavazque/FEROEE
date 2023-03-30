@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path')
-
+require('dotenv').config();
 
 app.use (express.json());
 
@@ -16,7 +16,7 @@ app.use(express.static(
   path.join(__dirname,"./public")));
 
   mercadopago.configure({
-  access_token: 'APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410'})
+  access_token: process.env.MERCADOPAGO_KEY })
 
           //routes
           app.post('/payment', (req, res) => {
