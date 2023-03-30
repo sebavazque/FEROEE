@@ -152,8 +152,7 @@ const Form = () => {
                             <form action="http://feroee.onrender.com/payment" method='POST'>
                                 <input type="hidden" name='title' value="FEROE"></input>
                                 <input type="hidden" name='price' value={totalPrice} ></input>
-                                <button type='submit' className='btnPagar'><h4>COMPRAR</h4></button>
-
+                                <button type='submit' className='btnPagar'><h4>COMPRAAAR</h4></button>
                             </form>
                         
                         </div>
