@@ -148,11 +148,7 @@ const Form = () => {
                             <h3>Total del pedido:</h3>
                             <h3>${totalPrice}</h3>
                         </div>
-                        <div>
-                        
-                                <button onClick={axios.post('http://feroeee.onrender.com/payment', totalPrice).then((res) =>window.location.href = res.data.response.body.init_point) } className='btnPagar'><h4>COMPRAAAR</h4></button>
-                        
-                        </div>
+
                         <h3>su orden es {ordenId}</h3>
 
             </div>        
