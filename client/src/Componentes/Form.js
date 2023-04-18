@@ -139,7 +139,7 @@ const Form = () => {
             </table>
             <div className='mp-check'>                  
                         <h3>Los pedidos se retiran por Barrio Martin (Rosario) o se pueden coordinar envios por cadeteria a cargo del cliente.</h3> 
-                        <h3>Mercado Pago <img src={MP2}/> </h3>  
+                        <h3>Mercado Pago <img src={MP2}/>  </h3>  
                         <img className='MP' src={MP}/>
                         <h3>Al confirmar tu compra, te redirigiremos a tu cuenta de Mercado Pago.</h3>
                    </div>   
@@ -150,7 +150,11 @@ const Form = () => {
                         </div>
                         <div>
                         
-                                <button onClick={axios.post('http://feroeee.onrender.com/payment', totalPrice).then((res) =>window.location.href = res.data.response.body.init_point) } className='btnPagar'><h4>COMPRAAAR</h4></button>
+                        <form action="http://feroeee.onrender.com/payment" method='POST'>
+                            <input type="hidden" name='title' value="FEROE"></input>
+                            <input type="hidden" name='price' value={totalPrice} ></input>
+                            <button type='submit' className='btnPagar'><h4>COMPRAAAR</h4></button>
+                        </form>
                         
                         </div>
                         <h3>su orden es {ordenId}</h3>
