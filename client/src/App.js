@@ -8,7 +8,6 @@ import CartContext from "./Componentes/CartContext";
 import Form from "./Componentes/Form";
 import ItemListContainer from "./Componentes/ItemListContainer";
 import CartContent from "./Componentes/CartContent";
-import Checkout from "./Componentes/Checkout";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
