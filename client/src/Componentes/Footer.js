@@ -1,6 +1,5 @@
 import LOGO from './CSS//FOTOS/LOGO.jpeg'
 import './CSS/Styles.css'
-import { AiOutlineWhatsApp, AiOutlineInstagram } from "react-icons/ai";
 import {Link} from 'react-router-dom'
 
 
