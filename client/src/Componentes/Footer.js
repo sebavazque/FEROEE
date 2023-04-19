@@ -18,7 +18,6 @@ function Footer () {
                         <li><Link to='/'>Inicio</Link></li>
                         <li><Link to='/productos'>TIENDA</Link></li>
                         <li><Link to='/contacto'>Contacto</Link></li>
-                        <li><Link to='/contacto'>GUIA DE TALLES</Link> </li>
                         <li><a href='https://www.instagram.com/weareferoe/'>INSTAGRAM </a> </li>
                         
                     </ul>
