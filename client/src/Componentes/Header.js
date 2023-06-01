@@ -57,7 +57,7 @@ function Header () {
                                 <div className={`${changeClass2}`}></div>
                             
                             </div> 
-                            <Link to='/'><img src={LOGO} className="logo" /></Link>
+                            <Link to='/'><img src={LOGO} className="logo" alt='' /></Link>
 
                             <Link to='/carrito'><BsCart4  className='logoCart'/><span>{cantidadTotal}</span> </Link>
 

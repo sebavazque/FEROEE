@@ -6,14 +6,15 @@
     background-position: bottom;
     transition: all .3s ease-in-out; 
     background-image: url(./FOTOS/Image8.jpg);
-        
+    object-fit: cover;    
 }
+
+
 
 
 .bannerShop-content{
     width: 100%;
     height: 100%;
-   
     display: flex;
     justify-content: center;
     align-items: center;

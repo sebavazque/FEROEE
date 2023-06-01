@@ -1,4 +1,4 @@
-import LOGO from './CSS//FOTOS/LOGO.jpeg'
+import LOGO from './CSS//FOTOS/LOGO.png'
 import './CSS/Styles.css'
 import {Link} from 'react-router-dom'
 

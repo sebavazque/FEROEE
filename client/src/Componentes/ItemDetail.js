@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppContext } from "./CartContext";
-import { toast } from "react-toastify";
+import DestacadosContainer from "./DestacadosContainer";
 import ItemCounter from "./ItemCounter";
 import './CSS/ItemDetail.css'
 import BannerShop from './BannerShop';
 import { useEffect } from 'react'
-import TalleS from "./TalleS";
 
 
 const ItemDetail = ({producto}) => {
@@ -15,7 +14,6 @@ const ItemDetail = ({producto}) => {
       }, [])
     
     const [add , setAdd] = useState(false) 
-    const [adde , setAdde] = useState(false) 
     const [selectedSize, setSelectedSize] = useState()
     const {addToCart} = useAppContext()
     const [image, setImage] = useState(false)
@@ -61,7 +59,7 @@ const ItemDetail = ({producto}) => {
 
                         </div>   
                         <div className={`${openMiniImage}`}>
-                                <img onClick={() => handleClickImg()} className='img2' src={producto.img2}/>
+                                <img onClick={() => handleClickImg() } className='img2' src={producto.img2}/>
                                 
                         </div>
                     </div>
@@ -72,7 +70,7 @@ const ItemDetail = ({producto}) => {
                         <h3 className="h23">${producto.precio}</h3> 
                         
                         <div className="item-talle">
-                        <h4>Talle</h4>
+                        <h4>Talle/Stock</h4>
                             <h3>{selectedSize}</h3>
                         </div>
                         {
@@ -87,12 +85,14 @@ const ItemDetail = ({producto}) => {
                             :
                             <div className='talles-container'>
                                 <div className="sizes-container">
-                                <button onClick={() => setSelectedSize('(S)')} className={ selectedSize === '(S)' ? 'button size-button selected' : 'button size-button'}>S</button>
-                                    <button onClick={() => setSelectedSize('(M)')} className={ selectedSize === '(M)' ? 'button size-button selected' : 'button size-button'}>M</button>
-                                    <button onClick={() => setSelectedSize('(L)')} className={ selectedSize === '(L)' ? 'button size-button selected' : 'button size-button'}>L</button>
-                                    <button onClick={() => setSelectedSize('(XL)')} className={ selectedSize === '(XL)' ? 'button size-button selected' : 'button size-button'}>XL</button>
+                                    <button onClick={() => setSelectedSize( `(S)  ${producto.S} `)} disabled={`${producto.S} ` <= 1} className={ selectedSize ===`(S)  ${producto.S} ` ? 'button size-button selected' : 'button size-button'}>S</button>
+                                    <button onClick={() => setSelectedSize(`(M)  ${producto.M} `)} disabled={`${producto.M} ` <= 1} className={ selectedSize === `(M)  ${producto.M} ` ? 'button size-button selected' : 'button size-button'}>M</button>
+                                    <button onClick={() => setSelectedSize(`(L)  ${producto.L} `)} disabled={`${producto.L} ` <= 1} className={ selectedSize === `(L)  ${producto.L} ` ? 'button size-button selected' : 'button size-button'}>L</button>
+                                    <button onClick={() => setSelectedSize(`(XL)  ${producto.XL} `)} disabled={`${producto.XL} ` <= 1} className={ selectedSize === `(XL)  ${producto.XL} ` ? 'button size-button selected' : 'button size-button'}>XL</button>
                                 </div>
+
                                 <ItemCounter  initial={1} onAdd={onAdd} />
+
                             </div>
                             
                             
@@ -104,12 +104,12 @@ const ItemDetail = ({producto}) => {
                     
                 </div>
                 <div className="descrip-content">
-                    <h3 className="h23">{producto.titulo}</h3>
+                    <h3 className="h23">Descripción</h3>
                     <p className="p">{producto.descripcion}</p>
                 </div>
             </div>
         </div>
-
+        <DestacadosContainer/>
     </div>
     );
 }

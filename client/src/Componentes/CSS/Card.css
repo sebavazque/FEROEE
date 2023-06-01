@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
 
-
-
 .Card-allContainer{
     background-color: white;
     width: 100%;
@@ -23,9 +21,6 @@
     box-sizing: border-box;
     margin: 30px;
     transition: all 0.5s;
-}
-.card-contenido:hover{
-   
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 

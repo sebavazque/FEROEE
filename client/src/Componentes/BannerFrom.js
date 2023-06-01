@@ -1,6 +1,5 @@
 import './CSS/BannerFrom.css'
 import {Link} from 'react-router-dom'
-import LOGO from './CSS/FOTOS/LOGO.png'
 import React from 'react'
 
 const BannerFrom = () => {

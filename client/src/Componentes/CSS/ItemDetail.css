@@ -28,8 +28,8 @@
 }
 
 .imgDetail{
-    width:300px;
-    height: 450px;
+    width: 400px;
+    height: 550px;
 }
 
 .item-talle{
@@ -47,6 +47,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
+    width: 100%;
 }
 
 .item-colum2{
@@ -85,7 +86,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 80%;
+    width: 70%;
     margin: 30px;
 }
 .descrip-content .p{
@@ -129,10 +130,10 @@
     transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s ease-in-out;
     visibility: hidden;
     opacity: 0;
-    z-index: 999;
+    z-index: 999999;
     transform: scale(0);
     overflow: hidden;
-    margin-top: -396px;
+    margin-top: -350px;
 }
 
 .model.open{
@@ -150,7 +151,6 @@
     line-height: 0;
     box-sizing: border-box;
     padding: 20px 0;
-    margin-top: 100px;
 }
 
 .modal{
@@ -165,10 +165,10 @@
     transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s ease-in-out;
     visibility: hidden;
     opacity: 0;
-    z-index: 999;
+    z-index: 999999;
     transform: scale(0);
     overflow: hidden;
-    margin-top: -849px;
+    margin-top: -805px;
 }
 
 .modal.abrir{
@@ -186,7 +186,7 @@
     line-height: 0;
     box-sizing: border-box;
     padding: 20px 0;
-    margin-top: 100px;
+    
 }
 
 
@@ -226,38 +226,56 @@
     padding: 10px;
 }
 
+.stock-container{
+    display: flex;
+   
+}
+
+.stock-container p{
+    margin: 10px;
+}
+
+
+
 @media only screen and (max-width:625px){
     .modal, .model{
         margin-top: -396px;
     }
+
 }
 
 
-@media only screen and (max-width:919px){
+@media only screen and (max-width:984px){
     .item-colum2{
         margin-left: 250px;
     }
+
+    
+    .descrip-content{
+        width: 90%;
+    }
 }
 
-@media only screen and (max-width:823px){
+@media only screen and (max-width:893px){
     .item-colum2{
         margin-left: 160px;
     }
 }
 
 
-@media only screen and (max-width:737px) {
+@media only screen and (max-width:799px) {
     .item-colum2{
         margin-left: 50px;
     }
 }
 
-@media only screen and (max-width:624px){
+@media only screen and (max-width:684px){
     .item-container{
         width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
+
 
     .line{
         width: 100%;
@@ -280,13 +298,16 @@
     }
 
     .mini{
-        margin-left: -215px;
+        margin-left: -315px;
     }
 }
 
-@media only screen and (max-width:380px){
-    .item-colum1 .img{
-        width:290px;
-        height: 400px;
+@media only screen and (max-width:426px){
+    .imgDetail{
+        width:310px;
+        height: 420px;
+    }
+    .mini{
+        margin-left: -220px;
     }
 }
