@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppContext } from "./CartContext";
-import DestacadosContainer from "./DestacadosContainer";
 import ItemCounter from "./ItemCounter";
 import './CSS/ItemDetail.css'
 import BannerShop from './BannerShop';
 import { useEffect } from 'react'
-
+import "react-multi-carousel/lib/styles.css";
+import CarruselMultiContainer from "./CarruselMutlIContainer";
 
 const ItemDetail = ({producto}) => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
-    
+
     const [add , setAdd] = useState(false) 
     const [selectedSize, setSelectedSize] = useState()
     const {addToCart} = useAppContext()
@@ -42,7 +42,7 @@ const ItemDetail = ({producto}) => {
 
     
     return (
-    <div>
+    <div className="detalle">
 
         <BannerShop/>
 
@@ -108,8 +108,16 @@ const ItemDetail = ({producto}) => {
                     <p className="p">{producto.descripcion}</p>
                 </div>
             </div>
+            <div className="relacionados">
+                <div className="prod-relacionados">
+                    <h3 id='H3D'>Productos Relacionados</h3>
+                    <CarruselMultiContainer/> 
+                </div>
+
+            </div>
+
         </div>
-        <DestacadosContainer/>
+         
     </div>
     );
 }

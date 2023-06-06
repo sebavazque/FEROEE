@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
 
 .destacado{
-    background-color: white;
+    background-color: rgb(240, 236, 236);
     width: 100%;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-   padding: 20px;
+   
    text-align: center;
 }
 
@@ -14,15 +14,13 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
 }
 
 .destacado-contenido{
     width: 250px;
     box-sizing: border-box;
-    margin: 30px;
-    transition: all 0.5s;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
+    transition: all 0.5s;}
 
 .destacado-contenedor{
     text-align: center;
@@ -30,19 +28,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    
+    background-color: #ffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin: 10px;
 }
 
 .destacado h3{
     color: black;
     font-weight: 600;
-    font-size: 22px;
-    padding: 10px;
+    font-size: 18px;
+  
     text-transform: uppercase;
+    
 }
 
-.imgC{
+.imgD{
     width: 250px;
     height: 380px;
     transition: all 0.5s;
@@ -50,7 +50,7 @@
     
 }
 
-.imgC:hover{
+.imgD:hover{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -66,7 +66,8 @@
 
 h2{
     font-weight: 600;
-    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
 }
 
 .destacado-colum6{
@@ -75,6 +76,7 @@ h2{
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #ffff;
 }
 
 h3{
@@ -111,18 +113,37 @@ h4{
     font-size: 15px;
 }
 
+
+@media screen and (max-width: 585px){
+    .destacado-contenido{
+        width: 200px;
+    }
+}
+
 @media screen and (max-width: 525px){
     .destacado-allContainer{
         padding: 0px;
     }
 }
+@media screen and (max-width: 485px){
+    .imgD{
+        width: 150px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 488px){
+    .destacado-contenido{
+        width: 150px;
+    }
+}
 
 @media screen and (max-width: 415px){
     .imgC{
-        width: 225px;
-        height: 350px;
+        width: 120px;
+        height: 220px;
     }
     .destacado-contenido{
-        width: 225px;
+        width: 120px;
     }
 }

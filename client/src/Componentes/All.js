@@ -20,7 +20,6 @@ const All = () => {
             <BannerFrom/>
             <DestacadosContainer/>
             <Acordeon/>
-            
             <a href='https://wa.me/3413667323'><AiOutlineWhatsApp className='whapFoot'/></a>
         </div>
     );

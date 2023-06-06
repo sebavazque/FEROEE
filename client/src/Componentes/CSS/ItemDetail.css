@@ -96,7 +96,7 @@
 
 .detail-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     background-color: white;
@@ -233,6 +233,11 @@
 
 .stock-container p{
     margin: 10px;
+}
+
+.detalle{
+    width: 100%;
+    height: 100%;
 }
 
 

@@ -11,7 +11,7 @@ const DestacadosCard = ({productos}) => {
                     <div className="destacado-contenedor" >
                         <div className="destacado-contenido" >
                             <div className="destacado-colum4"key={producto.id}>
-                                <Link to={`/${producto.categoria}/${producto.id}`}><img className='imgC' src={producto.img} alt=''/></Link>
+                                <Link to={`/${producto.categoria}/${producto.id}`}><img className='imgD' src={producto.img} alt=''/></Link>
                             </div>
                             <div className="destacado-colum5">
                                 <Link to={`/${producto.categoria}/${producto.id}`}><h2>{producto.titulo}</h2> </Link>
